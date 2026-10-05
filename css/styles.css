@@ -1,0 +1,192 @@
+:root {
+  --navy: #14213D;
+  --navy-dark: #0C1629;
+  --red: #C8102E;
+  --red-dark: #9F0C24;
+  --cream: #FAF7F2;
+  --ink: #1B1B1B;
+  --muted: #55555E;
+  --line: #D9D4CB;
+  --head: "Graduate", Georgia, serif;
+  --body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { color: var(--ink); font-family: var(--body); font-size: 1.1rem; line-height: 1.6; }
+
+h1, h2, h3, h4, .brand, .price, .num, .ticket-top {
+  font-family: var(--head);
+  font-weight: 400;
+  line-height: 1.12;
+  color: var(--navy);
+}
+h1 { font-size: 3rem; margin: 0 0 1.1rem; letter-spacing: 0.5px; }
+h2 { font-size: 2.1rem; margin: 0 0 1.6rem; letter-spacing: 0.5px; }
+/* red dashed line under each heading, like baseball stitching */
+h2::after { content: ""; display: block; width: 96px; border-top: 4px dashed var(--red); margin-top: 12px; }
+h3 { font-size: 1.3rem; margin: 0 0 0.5rem; }
+h4 { font-size: 1.6rem; margin: 0 0 0.5rem; }
+p { color: var(--muted); }
+a { color: var(--red); }
+
+a:focus-visible, button:focus-visible, .btn:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 3px solid #F2B705;
+  outline-offset: 2px;
+}
+
+/* Menu bar (works on phones too, the links wrap) */
+nav.nl-nav { background: var(--navy); height: auto; line-height: normal; box-shadow: none; }
+nav.nl-nav .nav-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 4px 24px; padding-top: 10px; padding-bottom: 10px; }
+nav.nl-nav .brand { font-size: 1.6rem; letter-spacing: 1.5px; color: #fff; }
+nav.nl-nav .brand span { color: var(--red); }
+nav.nl-nav ul { display: flex; flex-wrap: wrap; gap: 2px; margin: 0; }
+nav.nl-nav ul li { float: none; }
+nav.nl-nav ul a { display: block; padding: 6px 12px; color: #fff; font-family: var(--head); font-weight: 400; font-size: 0.95rem; letter-spacing: 1px; border-bottom: 3px solid transparent; }
+nav.nl-nav ul a:hover { border-bottom-color: var(--red); }
+
+/* Buttons */
+.btn, .btn-large {
+  background: var(--red);
+  color: #fff;
+  font-family: var(--head);
+  font-weight: 400;
+  font-size: 1rem;
+  text-transform: none;
+  letter-spacing: 1px;
+  border-radius: 0;
+  box-shadow: none;
+}
+.btn:hover, .btn-large:hover, .btn:focus { background: var(--red-dark); box-shadow: none; }
+.btn-flat { color: var(--navy); font-family: var(--head); font-weight: 400; font-size: 1rem; text-transform: none; letter-spacing: 1px; }
+.btn-flat:hover { background: var(--cream); }
+.btn-ghost { background: transparent; color: #fff; border: 2px solid #fff; line-height: 46px; }
+.btn-ghost:hover, .btn-ghost:focus { background: #fff; color: var(--navy); }
+.btn-ghost-dark { background: transparent; color: var(--navy); border: 2px solid var(--navy); line-height: 32px; }
+.btn-ghost-dark:hover, .btn-ghost-dark:focus { background: var(--navy); color: #fff; }
+
+/* Top of the page */
+.hero { padding: 96px 0 88px; }
+.hero-text { max-width: 44rem; }
+.hero h1 { color: #fff; }
+.hero .lead { color: #E7EAF1; font-size: 1.25rem; max-width: 34rem; }
+.hero .small-note { color: #C9D0DF; margin-top: 16px; font-size: 1.05rem; }
+.cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+
+.block { padding: 64px 0; }
+.tint { background: transparent; }
+
+/* How it works */
+.row.equal { display: flex; flex-wrap: wrap; }
+.row.equal > .col { display: flex; }
+.step { width: 100%; border-top: 4px solid var(--navy); padding: 14px 4px 8px; margin-bottom: 12px; }
+.step .num { font-size: 2.8rem; color: var(--red); margin-bottom: 4px; }
+.step p { margin: 0; font-size: 1.1rem; }
+
+/* Founder note */
+.founder-band { background: rgba(20, 33, 61, 0.88); padding: 56px 0; }
+.founder-text { color: #fff; font-size: 1.45rem; line-height: 1.45; max-width: 46rem; margin: 0 0 14px; }
+.founder-by { color: #AEB8CE; margin: 0; font-size: 1.05rem; }
+
+/* Testimonials */
+figure.quote { margin: 0 0 24px; padding: 0; }
+figure.quote blockquote { margin: 0 0 12px; padding: 0; border: none; font-size: 1.1rem; color: var(--ink); position: relative; padding-top: 34px; }
+figure.quote blockquote::before { content: "\201C"; position: absolute; top: -12px; left: -2px; font-family: var(--head); font-size: 4rem; color: var(--red); line-height: 1; }
+figure.quote figcaption { font-size: 1rem; color: var(--muted); }
+figure.quote figcaption b { color: var(--navy); font-weight: 600; }
+
+/* Pricing tickets */
+.ticket { width: 100%; background: #fff; border: 2px dashed var(--navy); padding: 0 24px 24px; margin-bottom: 16px; }
+.ticket.featured { border-color: var(--red); border-style: solid; border-width: 3px; }
+.ticket-top { background: var(--navy); color: #fff; margin: 0 -24px 16px; padding: 8px 24px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
+.ticket.featured .ticket-top { background: var(--red); color: #fff; }
+.ticket .price { font-size: 3rem; margin: 2px 0 10px; }
+.ticket ul { margin: 0 0 18px; }
+.ticket ul li { padding: 7px 0 7px 26px; position: relative; color: var(--muted); border-top: 1px dotted var(--line); }
+.ticket ul li:first-child { border-top: none; }
+.ticket ul li::before { content: "\2713"; position: absolute; left: 2px; color: var(--red); font-weight: 700; }
+
+.app-text { max-width: 42rem; font-size: 1.15rem; }
+
+/* Popups: pure CSS. A popup shows when its link is clicked (the :target rule). */
+.popup { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1000; background: rgba(12, 22, 41, 0.7); align-items: center; justify-content: center; padding: 16px; }
+.popup:target { display: flex; }
+.popup-bg { position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
+.popup-box { position: relative; background: #fff; width: 100%; max-width: 440px; padding: 26px; border-top: 6px solid var(--red); max-height: 100%; overflow-y: auto; }
+.popup-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 20px; }
+
+.field label { display: block; font-weight: 600; font-size: 1rem; color: var(--navy); margin: 14px 0 4px; }
+.field input, .field select { display: block; width: 100%; height: auto; margin: 0; padding: 10px 12px; border: 1px solid #9AA0AE; border-radius: 0; background: #fff; color: var(--ink); font-family: var(--body); font-size: 1.1rem; box-sizing: border-box; }
+.field input:focus, .field select:focus { border-color: var(--red); }
+
+footer.nl-footer { padding: 28px 0; background: rgba(12, 22, 41, 0.92); text-align: center; }
+footer.nl-footer p { font-size: 0.95rem; margin: 0; color: #AEB8CE; }
+footer.nl-footer p + p { margin-top: 8px; }
+footer.nl-footer a { color: #fff; text-decoration: underline; }
+
+@media (max-width: 600px) {
+  h1 { font-size: 2.1rem; }
+  h2 { font-size: 1.7rem; }
+  .hero { padding: 56px 0 52px; }
+  .founder-text { font-size: 1.2rem; }
+  .block { padding: 44px 0; }
+  nav.nl-nav .nav-inner { justify-content: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Make it feel like a real web app on a computer ---------- */
+
+/* Use more of the screen (Materialize only uses 70% by default) */
+.container { width: 92%; max-width: 1240px; }
+
+/* Menu bar stays at the top while you scroll, like an app bar */
+nav.nl-nav { position: sticky; top: 0; z-index: 100; }
+[id] { scroll-margin-top: 72px; }
+
+/* Bigger type and more room on large screens */
+@media (min-width: 993px) {
+  h1 { font-size: 3.6rem; }
+  h2 { font-size: 2.5rem; }
+  h3 { font-size: 1.4rem; }
+  nav.nl-nav .brand { font-size: 1.9rem; }
+  nav.nl-nav ul a { font-size: 1.05rem; padding: 8px 16px; }
+  .hero { padding: 130px 0 120px; }
+  .hero-text { max-width: 54rem; }
+  .hero .lead { font-size: 1.45rem; max-width: 40rem; }
+  .block { padding: 84px 0; }
+  .founder-text { font-size: 1.9rem; max-width: 60rem; }
+  .step .num { font-size: 3.2rem; }
+  .app-text { max-width: 52rem; }
+}
+
+
+/* ---------- Stadium photo as the background of the whole page ---------- */
+html { background: var(--navy-dark); }
+body { background: transparent; }
+
+/* The photo is fixed behind everything, with a dark navy tint so text stays readable.
+   A fixed layer is used instead of background-attachment, because phones handle it better. */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -1;
+  background-image: linear-gradient(rgba(12, 22, 41, 0.55), rgba(12, 22, 41, 0.78)), url("../images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Content sits on white panels so it is easy to read over the photo */
+.block { padding: 28px 0; }
+.block > .container { background: rgba(255, 255, 255, 0.97); padding: 44px 40px 36px; }
+.block.tint > .container { background: rgba(250, 247, 242, 0.97); }
+
+@media (max-width: 600px) {
+  .block { padding: 18px 0; }
+  .block > .container { padding: 28px 18px 22px; }
+  /* On a phone the menu wraps into two rows, so let it scroll away to save space */
+  nav.nl-nav { position: static; }
+  [id] { scroll-margin-top: 12px; }
+}
