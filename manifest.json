@@ -1,8 +1,9 @@
 {
+  "id": "nextlevel-outreach",
   "name": "NextLevel Outreach",
   "short_name": "NextLevel",
   "description": "Helps high school and college baseball players email the right college coaches.",
-  "start_url": "index.html",
+  "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
